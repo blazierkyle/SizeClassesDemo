@@ -34,6 +34,9 @@ Nullam venenatis erat eget imperdiet volutpat. Maecenas feugiat, tellus ac males
                 <constraint firstItem="5SE-B1-CZj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yVz-d5-gTR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="textLabel" destination="5SE-B1-CZj" id="1zb-IR-XVz"/>
+            </connections>
         </view>
     </objects>
 </document>

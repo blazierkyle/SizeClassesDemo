@@ -10,6 +10,8 @@ import UIKit
 
 final class PlainView: UIView, Nibbable {
 
+    @IBOutlet var textLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,6 +24,16 @@ final class PlainView: UIView, Nibbable {
         // Add an little delay so we can prove we hit unspecified first 💥
         UIView.animate(withDuration: 2.0) {
             self.updateBackgroundColor()
+        }
+        
+        updateFont()
+    }
+    
+    private func updateFont() {
+        if case .regular = traitCollection.horizontalSizeClass {
+            textLabel.font = UIFont.boldSystemFont(ofSize: 28)
+        } else {
+            textLabel.font = UIFont.systemFont(ofSize: 18)
         }
     }
     
